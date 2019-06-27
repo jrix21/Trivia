@@ -1,0 +1,301 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 2;
+    color:#777777;
+    background-image:url("../images/");
+    background-repeat:repeat;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+  }
+  
+  
+  /* -----BASIC FRAMEWORK CSS----- */
+  
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .row-vert {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+  
+  .right-align {
+    justify-content: flex-end;
+  }
+  
+  .left-align {
+    justify-content: flex-start;
+  }
+  
+  .split {
+    justify-content: space-between;
+  }
+  
+  .col-6 {
+    width: 100%;
+    height: inherit;
+  }
+  
+  .col-4 {
+    width: 66.6666%;
+  }
+  
+  .col-3 {
+    width: 50%;
+  }
+  
+  .col-2 {
+    width: 33.3333%;
+  }
+  
+  .col-1 {
+    width: 16.6666%;
+  }
+  
+  
+  /* -----ELEMENT CSS----- */
+  
+  
+  main {
+    margin: 0 10px 0 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  
+  }
+  
+  header {
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+    background-color: black;
+    margin: 0;
+    width: 100%;
+  }
+  
+  form {
+    display: block;
+  }
+  
+  #answers h2 {
+    margin: 30px 25px;
+    font-family: Raleway;
+    font-size: 1.5em;
+    color: white;
+    line-height: .1;
+  }
+  
+  #questions h3 {
+    color: black;
+    font-size: 2em;
+  }
+  
+  p {
+    font-family: Raleway;
+    font-size: .7em;
+    color: white;
+    line-height: 1;
+    margin-left: 25px;
+  }
+  
+  #answers p {
+    font-family: Raleway;
+    font-size: 1.5em;
+    color: white;
+    line-height: 2;
+    margin-left: 25px;
+  }
+  
+  /* -----FIXED COMPONENTS----- */
+  
+  #gameBoard {
+    height: 100%;
+  }
+  
+  #gameTitle {
+    z-index: 1;
+    overflow: hidden;
+    padding: 0;
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .overlay {
+    width: 100%;
+    height: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+    background-color: lightskyblue;
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
+  }
+
+  #titleBox {
+    text-align: center;
+    color: white;
+    margin: 0;
+    position: absolute;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(0,0,0,.5);
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    font-size: 2em;
+    font-family: 'Abril Fatface', cursive;
+  
+  }
+  
+  #gameFeed {
+    z-index: 2;
+    min-height:70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2em;
+    color: white;
+    margin-top: 20px;
+    background-color: lightblue;
+    width: 70%;
+    align-self: center;
+    padding-right: 60px;
+    padding-left: 60px;
+    align-items: center;
+    border-bottom: groove 3px white;
+    text-align: center;
+  }
+  
+  #answers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:blue;
+    width: 70%;
+    align-self: center;
+    padding: 60px;
+  }
+  
+  #answers h3 {
+    font-family: Raleway;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  #buttonBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  #buttonBox input {
+    margin-right: 25px;
+  }
+  
+  .startButton {
+    background-color: #111413;
+    border: none;
+    color: white;
+    font-family: Raleway;
+    align-self: center;
+    padding: 30px;
+    font-size: 1.5em;
+  }
+  
+  #stickyFooter {
+    color:#fff;
+    background-color:#894021;
+    background-size: cover;
+    border-top: 6px solid #4A2A09;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+  }
+  /* --- responsive ------ */
+  
+  @media screen and (max-width: 414px) {
+  
+    #titleBox,
+    #answers {
+      width:  100%;
+     }
+    #questions {
+      width: 100%;
+    }
+  
+    #questions h2{
+      font-size: 1em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+  
+    p {
+      margin-left: 5px;
+      font-size: .5em;
+    }
+  
+    #buttonBox {
+      font-size: 1.5em;
+      line-height: 1.2;
+  
+    }
+    #answers {
+      padding: 10px;
+      min-height: 300px;
+    }
+    form {
+      line-height: 1.5;
+    }
+  
+    #buttonBox .row {
+      justify-content: center;
+    }
+  
+    .startButton {
+      margin-top: 15px;
+    }
+  
+    #answers h2 {
+      line-height: 1;
+      margin: 10px 10px;
+    }
+  
+  }

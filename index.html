@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Trivia Game</title>
+  <!-- JavaScript file -->
+
+  <!-- reset browser defaults -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Jim+Nightshade|Libre+Baskerville|Raleway" rel="stylesheet">
+
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+</head>
+<body>
+  <!-- Entire page row -->
+  <main id="gameBoard" class="row row-vert">
+    <!-- Entire page col -->
+    <div class="col-6">
+
+      <!-- header box row -->
+      <header id="gameTitle" class="row">
+        <div class="overlay">
+          <div id="titleBox" class="col-4">
+            <h1>One Piece Trivia</h1>
+          </div>
+        </div>
+      </header>
+      <!-- Q&A will be displayed below -->
+      <article id="gameFeed" class="row">
+        <!-- questions section -->
+        <section id="questions" class="col-6">
+        </section>
+        <!-- answer choices section -->
+        <section id="answers" class="col-6">
+          <div id="buttonBox" class="col-6">
+          </div>
+
+        </section>
+      </article>
+    </div>
+  </main>
+
+<script src="./assets/javascript/game.js"></script>
+
+</body>
+</html>
